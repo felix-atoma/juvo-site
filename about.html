@@ -6,8 +6,30 @@
     <title>JUVO HEALTH ASSISTANT</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Fixed manifest link (ensure site.webmanifest exists in root) -->
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- Preload critical fonts with swap -->
+    <link rel="preload" href="assets/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/themify.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="assets/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- CSS with optimized font loading -->
+    <style>
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('assets/fonts/fa-solid-900.woff2') format('woff2');
+            font-display: swap;
+            font-weight: 900;
+        }
+        @font-face {
+            font-family: 'Themify';
+            src: url('assets/fonts/themify.woff') format('woff');
+            font-display: swap;
+        }
+    </style>
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
